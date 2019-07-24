@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E09565A22E6708D00C5E71F /* AccessDenied.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3E09565822E6708D00C5E71F /* AccessDenied.wav */; };
+		3E09565B22E6708D00C5E71F /* AccessGranted.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3E09565922E6708D00C5E71F /* AccessGranted.wav */; };
+		3E09565D22E670E100C5E71F /* AmusementAreas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E09565C22E670E100C5E71F /* AmusementAreas.swift */; };
+		3E09566322E675FB00C5E71F /* Entrant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E09566222E675FB00C5E71F /* Entrant.swift */; };
+		3E09566522E698CA00C5E71F /* RideAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E09566422E698CA00C5E71F /* RideAccess.swift */; };
+		3E09566722E6993800C5E71F /* Discounts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E09566622E6993800C5E71F /* Discounts.swift */; };
+		3E09566922E7EA2200C5E71F /* SwipeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E09566822E7EA2200C5E71F /* SwipeProtocol.swift */; };
+		3E09566B22E7EB2600C5E71F /* EntrantPass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E09566A22E7EB2600C5E71F /* EntrantPass.swift */; };
+		3E09566D22E7F4D800C5E71F /* EntrantError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E09566C22E7F4D800C5E71F /* EntrantError.swift */; };
 		3E6316AC22E66DFA00079766 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6316AB22E66DFA00079766 /* AppDelegate.swift */; };
 		3E6316AE22E66DFA00079766 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6316AD22E66DFA00079766 /* ViewController.swift */; };
 		3E6316B122E66DFA00079766 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E6316AF22E66DFA00079766 /* Main.storyboard */; };
@@ -15,6 +24,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3E09565822E6708D00C5E71F /* AccessDenied.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = AccessDenied.wav; sourceTree = "<group>"; };
+		3E09565922E6708D00C5E71F /* AccessGranted.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = AccessGranted.wav; sourceTree = "<group>"; };
+		3E09565C22E670E100C5E71F /* AmusementAreas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmusementAreas.swift; sourceTree = "<group>"; };
+		3E09566222E675FB00C5E71F /* Entrant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entrant.swift; sourceTree = "<group>"; };
+		3E09566422E698CA00C5E71F /* RideAccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideAccess.swift; sourceTree = "<group>"; };
+		3E09566622E6993800C5E71F /* Discounts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Discounts.swift; sourceTree = "<group>"; };
+		3E09566822E7EA2200C5E71F /* SwipeProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeProtocol.swift; sourceTree = "<group>"; };
+		3E09566A22E7EB2600C5E71F /* EntrantPass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntrantPass.swift; sourceTree = "<group>"; };
+		3E09566C22E7F4D800C5E71F /* EntrantError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntrantError.swift; sourceTree = "<group>"; };
 		3E6316A822E66DFA00079766 /* AmusementPark.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AmusementPark.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E6316AB22E66DFA00079766 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3E6316AD22E66DFA00079766 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -35,6 +53,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3E09565722E6706700C5E71F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3E09565822E6708D00C5E71F /* AccessDenied.wav */,
+				3E09565922E6708D00C5E71F /* AccessGranted.wav */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		3E63169F22E66DFA00079766 = {
 			isa = PBXGroup;
 			children = (
@@ -54,12 +81,20 @@
 		3E6316AA22E66DFA00079766 /* AmusementPark */ = {
 			isa = PBXGroup;
 			children = (
+				3E09565722E6706700C5E71F /* Resources */,
 				3E6316AB22E66DFA00079766 /* AppDelegate.swift */,
 				3E6316AD22E66DFA00079766 /* ViewController.swift */,
 				3E6316AF22E66DFA00079766 /* Main.storyboard */,
 				3E6316B222E66DFC00079766 /* Assets.xcassets */,
 				3E6316B422E66DFC00079766 /* LaunchScreen.storyboard */,
 				3E6316B722E66DFC00079766 /* Info.plist */,
+				3E09565C22E670E100C5E71F /* AmusementAreas.swift */,
+				3E09566222E675FB00C5E71F /* Entrant.swift */,
+				3E09566422E698CA00C5E71F /* RideAccess.swift */,
+				3E09566622E6993800C5E71F /* Discounts.swift */,
+				3E09566822E7EA2200C5E71F /* SwipeProtocol.swift */,
+				3E09566A22E7EB2600C5E71F /* EntrantPass.swift */,
+				3E09566C22E7F4D800C5E71F /* EntrantError.swift */,
 			);
 			path = AmusementPark;
 			sourceTree = "<group>";
@@ -123,8 +158,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				3E6316B622E66DFC00079766 /* LaunchScreen.storyboard in Resources */,
+				3E09565B22E6708D00C5E71F /* AccessGranted.wav in Resources */,
 				3E6316B322E66DFC00079766 /* Assets.xcassets in Resources */,
 				3E6316B122E66DFA00079766 /* Main.storyboard in Resources */,
+				3E09565A22E6708D00C5E71F /* AccessDenied.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,8 +172,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E09566722E6993800C5E71F /* Discounts.swift in Sources */,
+				3E09566322E675FB00C5E71F /* Entrant.swift in Sources */,
+				3E09566522E698CA00C5E71F /* RideAccess.swift in Sources */,
 				3E6316AE22E66DFA00079766 /* ViewController.swift in Sources */,
 				3E6316AC22E66DFA00079766 /* AppDelegate.swift in Sources */,
+				3E09565D22E670E100C5E71F /* AmusementAreas.swift in Sources */,
+				3E09566922E7EA2200C5E71F /* SwipeProtocol.swift in Sources */,
+				3E09566B22E7EB2600C5E71F /* EntrantPass.swift in Sources */,
+				3E09566D22E7F4D800C5E71F /* EntrantError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
