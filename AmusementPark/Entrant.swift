@@ -27,14 +27,19 @@ class ParkEntrant: Swipeable   {
         self.entrantSubType = subType
         self.entrantPass = EntrantPass(entrantSubType: subType)
     }
-    func swipeEntrant(pass: [ParkArea], areaRequested: ParkAreas) -> Bool {
+    func swipeEntrant(pass: [ParkArea], areaRequested: ParkArea) -> Bool {
         return pass.contains(areaRequested)
     }
     func swipeEntrant(pass: [RideAccess], rideBenefitRequested: RideAccess) -> Bool {
         return pass.contains(rideBenefitRequested)
     }
     func swipeEntrant(pass: AvailableDiscounts, itemType: SellableItem) -> Double {
-        
+        switch itemType {
+        case .food:
+            return pass.foodDiscount
+        case .merchandise:
+            return pass.merchDiscount
+        }
     }
 }
 

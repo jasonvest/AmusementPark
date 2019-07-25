@@ -9,7 +9,7 @@
 import Foundation
 
 protocol Swipeable {
-    func swipeEntrant(pass: [ParkArea], areaRequested: ParkAreas) -> Bool
+    func swipeEntrant(pass: [ParkArea], areaRequested: ParkArea) -> Bool
     func swipeEntrant(pass: [RideAccess], rideBenefitRequested: RideAccess) -> Bool
     func swipeEntrant(pass: AvailableDiscounts, itemType: SellableItem) -> Double
 }
