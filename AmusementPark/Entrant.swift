@@ -27,38 +27,64 @@ class ParkEntrant: Swipeable   {
         self.entrantSubType = subType
         self.entrantPass = EntrantPass(entrantSubType: subType)
     }
-    func swipeEntrant(pass: EntrantPass) -> Bool {
-        return true
+    func swipeEntrant(pass: [ParkArea], areaRequested: ParkAreas) -> Bool {
+        return pass.contains(areaRequested)
+    }
+    func swipeEntrant(pass: [RideAccess], rideBenefitRequested: RideAccess) -> Bool {
+        return pass.contains(rideBenefitRequested)
+    }
+    func swipeEntrant(pass: AvailableDiscounts, itemType: SellableItem) -> Double {
+        
     }
 }
 
 class ParkGuest: ParkEntrant    {
-    var dateOfBirth: Date?
+    let guestInfo: GuestInfo
     
-    init(entrantSubType subType: EntrantSubType, dateOfBirth dob: Date? = nil) throws {
-        if subType == .freeChildGuest && dob == nil {
-            throw EntrantError.dob
+    init(entrantSubType subType: EntrantSubType, dateOfBirth: Date? = nil) throws {
+        guard let dob = dateOfBirth else {
+            throw EntrantError.missingDOB
         }
-        self.dateOfBirth = dob
+        
+        if subType == .freeChildGuest && !ParkGuest.isChild(dateOfBirth: dob) {
+            throw EntrantError.overAge
+        }
+        self.guestInfo = GuestInfo(dateOfBirth: dob)
         super.init(entrantSubType: subType)
+    }
+    
+    static func isChild(dateOfBirth dob: Date) -> Bool {
+        let today = Date()
+        let fiveYearInterval: TimeInterval = ((((60.0 * 60.0) * 24) * 365) * 5)
+        let checkDate = Date(timeInterval: fiveYearInterval, since: dob)
+        
+        if checkDate >= today {
+            return true
+        } else  {
+            return false
+        }
     }
 }
 
 class ParkEmployee: ParkEntrant   {
-    var firstName: String
-    var lastName: String
-    var streetAddress: String
-    var city: String
-    var state: String
-    var zipCode: String
+    let employeeInfo: EmployeeInfo
     
-    init(firstName first: String, lastName last: String, streetAddress street: String, city: String, state: String, zipCode zip: String, entrantSubType subType: EntrantSubType) {
-        self.firstName = first
-        self.lastName = last
-        self.streetAddress = street
-        self.city = city
-        self.state = state
-        self.zipCode = zip
+    init(personalInfo info: EmployeeInfo, entrantSubType subType: EntrantSubType) throws {
+        if info.firstName.isEmpty   {
+            throw EntrantError.firstName
+        } else if info.lastName.isEmpty {
+            throw EntrantError.lastName
+        } else if info.streetAddress.isEmpty    {
+            throw EntrantError.streetAddress
+        } else if info.city.isEmpty {
+            throw EntrantError.city
+        } else if info.state.isEmpty    {
+            throw EntrantError.state
+        } else if info.zipCode.isEmpty  {
+            throw EntrantError.zipCode
+        } else  {
+            self.employeeInfo = info
+        }
         super.init(entrantSubType: subType)
     }
 }

@@ -9,7 +9,8 @@
 import Foundation
 
 enum EntrantError: Error   {
-    case dob
+    case missingDOB
+    case overAge
     case firstName
     case lastName
     case streetAddress

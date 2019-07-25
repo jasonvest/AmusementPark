@@ -8,15 +8,15 @@
 
 import Foundation
 
-enum ParkAreas: String  {
+enum ParkArea: String  {
     case amusement
     case kitchen
     case rideControl
     case maintenance
     case office
     
-    static func determineAccessAreas(entrantSubType subType: EntrantSubType) -> [ParkAreas]    {
-        var accessibleAreas: [ParkAreas] = []
+    static func determineAccessAreas(entrantSubType subType: EntrantSubType) -> [ParkArea]    {
+        var accessibleAreas: [ParkArea] = []
 
         switch subType {
         case .classicGuest, .vipGuest, .freeChildGuest:
